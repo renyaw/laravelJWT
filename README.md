@@ -54,7 +54,7 @@ b. password
 7. Update:
 - **URL: http://127.0.0.1:8000/api/auth/users/{id} (PUT)**
 - **This endpoint allows you to update data based on the user ID.**
-- 
+  
 8. Delete:
 - **URL: http://127.0.0.1:8000/api/auth/users/{id} (DELETE)**
 - **This endpoint allows you to delete data based on the user ID.** 
