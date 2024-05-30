@@ -35,7 +35,9 @@ class AuthController extends Controller
         $validator = Validator::make(request()->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed|min:8',
+            'password' => 'required|confirmed',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required|date',
         ]);
 
         if($validator->fails()){
@@ -46,6 +48,8 @@ class AuthController extends Controller
         $user->name = request()->name;
         $user->email = request()->email;
         $user->password = bcrypt(request()->password);
+        $user->tempat_lahir = request()->tempat_lahir;
+        $user->tanggal_lahir = request()->tanggal_lahir;
         $user->save();
 
         if($user){
@@ -54,7 +58,7 @@ class AuthController extends Controller
             return response()->json(['message' => 'Pendaftaran gagal']);
         }
 
-}
+    }
     public function login()
     {
         $credentials = request(['email', 'password']);

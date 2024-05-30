@@ -12,12 +12,18 @@ class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable;
 
-    
+
     protected $fillable = [
         'name',
         'email',
         'password',
+        'tempat_lahir',
+        'tanggal_lahir',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
