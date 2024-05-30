@@ -8,7 +8,10 @@ This project is a backend project with the following functional Software Require
 - **The project includes a Data Sort feature (Ascending and Descending, with the default being Descending).**
 - **The project includes a Data Pagination feature.**
 
-
+## DUMMY ACCOUNT LOGIN
+- email : ujicoba@contoh.com
+- password : 123456
+  
 ## How to Use API (Postman)
 1. **Run Laravel Project**
 2. **Open Postman.**
@@ -62,3 +65,4 @@ b. password
 9. Logout:
 - **URL: http://127.0.0.1:8000/api/auth/logout?token (POST)**
 - **Use this endpoint to logout using a token.**
+
